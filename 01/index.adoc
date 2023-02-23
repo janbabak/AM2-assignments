@@ -3,14 +3,14 @@
 == Stateful
 
 * Start
-
++
 [source,bash]
 ----
 $ node .src/stateful.js
 ----
 
 * Connect using telnet
-
++
 [source,bash]
 ----
 $ telnet 127.0.0.1 8124
@@ -42,14 +42,14 @@ process
 == Stateless
 
 * Start
-
++
 [source,bash]
 ----
 $ node .src/stateless.js
 ----
 
 * Connect using telnet
-
++
 [source,bash]
 ----
 $ telnet 127.0.0.1 8124
