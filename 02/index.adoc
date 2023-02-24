@@ -1,1 +1,4 @@
-= HW2 - TBD!
+= Help
+
+- results can be verified live here https://bizwu.fit.cvut.cz/B202/babakjan-sem/am2.html
+- not working locally because of CORS

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AM2 HW02</title>
+
+		<style>
+			html,
+			body,
+			main {
+				height: 100vh;
+			}
+
+			main {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>NI-AM2 HW02</h1>
+			<button onclick="downloadFile()">Download file</button>
+			<span id="status" style="margin-top: 1rem; font-size: 2rem"></span>
+		</main>
+
+		<script>
+			const statusLabel = document.querySelector("#status");
+
+			async function downloadFile() {
+				let xhr = new XMLHttpRequest();
+				xhr.responseType = "blob";
+				xhr.onprogress = showDownloading;
+				xhr.onload = showFinishedDownloading;
+				xhr.open("GET", "https://bizwu.fit.cvut.cz/B202/babakjan-sem/serka_ntk.MOV");
+				showLoading();
+				xhr.send();
+				showLoaded();
+			}
+
+			function showStatus(status) {
+				console.log(status);
+				statusLabel.innerHTML = status;
+			}
+
+			function showLoading() {
+				showStatus("loading");
+			}
+
+			function showLoaded() {
+				showStatus("loaded");
+			}
+
+			function showDownloading(event) {
+				showStatus(
+					"downloading" +
+						(event.total !== 0
+							? ` ${((event.loaded / event.total) * 100).toFixed(0)}%`
+							: "")
+				);
+			}
+
+			function showFinishedDownloading() {
+				showStatus("finished downloading");
+			}
+		</script>
+	</body>
+</html>
