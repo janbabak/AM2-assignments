@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  redis-server:
+    image: redis
+    container_name: redis-server
+    ports:
+      - 6379:6379
+    expose:
+      - 6379
+  redis-client:
+    image: redis
+    container_name: redis-client
+  node-server:
+    build: .
+    container_name: node-server
+    ports:
+      - 8080:8080
+    working_dir: /app
+    volumes:
+      - ./:/app
+    depends_on:
+      - redis-server
+    command: node main.js
+    links:
+      - redis-server

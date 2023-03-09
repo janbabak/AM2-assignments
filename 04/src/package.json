@@ -1,0 +1,14 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "redis test project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Babak",
+  "license": "ISC",
+  "dependencies": {
+    "redis": "^4.6.5"
+  }
+}
