@@ -9,6 +9,7 @@
   "author": "Jan Babak",
   "license": "ISC",
   "dependencies": {
+    "mime": "^3.0.0",
     "redis": "^4.6.5"
   }
 }
