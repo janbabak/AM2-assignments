@@ -5,7 +5,7 @@
 * xref:03/index#[]
 * xref:04/index#[]
 * xref:05/index#[]
-* xref:06/index#[]
+* xref:06/readme.md#[]
 * xref:07/index#[]
 * xref:08/index#[]
 * xref:09/index#[]
