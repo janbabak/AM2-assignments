@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SSE</title>
+
+		<style>
+			body {
+				font-family: "Lucida Console", "Courier New", monospace;
+				max-width: 800px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 10rem;
+			}
+
+			#message {
+				font-size: 1.5rem;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Server sent events</h1>
+
+		<div id="message"></div>
+
+		<script>
+			message = document.getElementById("message");
+			receivedData = "";
+
+			const sseSource = new EventSource("/sse");
+
+			sseSource.onmessage = (event) => {
+				receivedData += event.data + " ";
+				message.textContent = receivedData;
+			};
+		</script>
+	</body>
+</html>
