@@ -1,0 +1,12 @@
+= Architecture and middleware 2 homeworks
+
+This repository includes homework assignments from the Architecture and Middleware course at https://fit.cvut.cz/en[FIT Czech Technical University in Prague]. The course emphasized various web-based technologies using NodeJS.
+
+* xref:01-statefull,stateless-server/README#[Statefull and Stateless server]
+* xref:02-AJAX-and-XHR-states/README#[AJAX and XHR states]
+* xref:03-nodejs-server-in-docker/README#[NodeJS server in Docker]
+* xref:04-docker-advanced-nodejs,redis/README#[Advanced Docker - NodeJS and Redis]
+* xref:05-data-access/README#[Data acess]
+* xref:06-http2,multiplexing,server-push/README#[HTTP2 multiplexing and server push]
+* xref:07-server-sent-events/README#[Server sent events]
+* xref:08-OAuth-browser-based/README#[OAuth - browser based]
