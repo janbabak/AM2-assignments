@@ -1,0 +1,51 @@
+= 2. AJAX and XHR states
+
+== AJAX overview
+
+- Asynchronous JavaScript and XML
+- technique for creating better, faster, and more interactive web applications
+- relies on XML, JSON, HTML, CSS and JavaScript
+- AJAX is not a programming language
+
+== XMLHttpRequest (XHR)
+
+* Interface to utilize HTTP protocol in JavaScript
+* standardized by W3C
+
+* methods and properties of XHR object
+** *open*, opens the request, parameters:
+*** *method* – method to be used (e.g. GET, PUT, POST),
+**** *url* – url of the resource,
+**** *asynch* – true to make asynchronous call,
+**** *user, pass* – credentials for authentication.
+** *onReadyStateChange* – JavaScript function object, it is called when readyState changes (uninitialized, loading, loaded, interactive, completed).
+** *send, abort* – sends or aborts the request (for asynchronous calls)
+** *status, statusText* – HTTP status code and a corresponding text.
+** *responseText, responseXML* – response as text or as a DOM document (if possible).
+** *onload* – event listener to support server push.
+
+
+== Tasks
+
+* Create a simple HTML page with an info text field and a single button
+* Implement a JavaScript function which is triggered when the button is clicked
+** The function should fetch relatively large file (e.g. 100-200MB)
+** in the text field show following states:
+*** loading - when the open method was called
+*** loaded - when the send method was called
+*** downloading - while the data is being downloaded
+*** finished downloading - when the data has beeen downloaded
+* you can use Promise, async/await 
+
+=== Instructions for submitting
+
+* publish your source code
+* dont forget to comment your code
+* publish screenshots to illustrate your solution
+* provide short textual description on how it works
+
+
+== Solution
+
+- results can be verified live here https://bizwu.fit.cvut.cz/B202/babakjan-sem/am2.html
+- not working locally because of the CORS

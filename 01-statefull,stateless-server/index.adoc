@@ -1,0 +1,105 @@
+= 1. Simple Statefull/Stateless Server 
+
+== Task
+
+Implement simple Statefull (All interactions within one session) and Stateless (Information about state is part of communication) server in http://nodejs.org using http://nodejs.org/api/net.html[network module].
+
+Your server should be able to communicate using following commmands:
+
+* open - open order
+* add - add item
+* process - process order
+
+Example of communication (order of commands is important):
+
+----
+  -->open (client request)
+  <--opened (server response)
+  -->add
+  <--added
+  -->process
+  <--processed
+----
+
+
+Do not forget show example of telnet communications.
+
+== Solution
+
+=== Stateful
+
+* Start
++
+[source,bash]
+----
+$ node .src/stateful.js
+----
+
+* Connect using telnet
++
+[source,bash]
+----
+$ telnet 127.0.0.1 8124
+----
+
+* Controls
+
+** Open new order
++
+[source,bash]
+----
+open
+----
+
+** Add item to opened order
++
+[source,bash]
+----
+add mango
+----
+
+** Process opened order
++
+[source,bash]
+----
+process
+----
+
+=== Stateless
+
+* Start
++
+[source,bash]
+----
+$ node .src/stateless.js
+----
+
+* Connect using telnet
++
+[source,bash]
+----
+$ telnet 127.0.0.1 8124
+----
+
+* Controls
+
+** Open new order
++
+[source,bash]
+----
+open
+----
+
+** Add item to opened order of id 0
++
+[source,bash]
+----
+add 0 mango
+----
+
+** Process opened order of id 0
++
+[source,bash]
+----
+process 0
+----
