@@ -1,4 +1,4 @@
-= Architecture and middleware 2 homeworks
+= Architecture and middleware 2 assignments
 
 This repository includes homework assignments from the Architecture and Middleware course at https://fit.cvut.cz/en[FIT Czech Technical University in Prague]. The course emphasized various web-based technologies using NodeJS.
 
